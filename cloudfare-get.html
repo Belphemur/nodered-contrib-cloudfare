@@ -14,14 +14,14 @@
     });
 </script>
 
-<script type="text/x-red" data-template-name="lower-case">
+<script type="text/x-red" data-template-name="cloudfare-get">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <label for="node-input-url"><i class="icon-tag"></i> URL</label>
+        <input type="text" id="node-input-url" placeholder="http://example.com">
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="lower-case">
+<script type="text/x-red" data-help-name="cloudfare-get">
     <p>This node will do a GET request on the url that is behind a CloudFare protection.</p>
     <p>The message will contain a property <em>payload</em> containing the body of the request.</p>
     <p>You can also set the url directly in the message with the property <code>url</code>.</p>
