@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('cloudfare-get',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            url: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "cloudfare.png",
+        label: function() {
+            return "CloudFare Get " + this.url;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="lower-case">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="lower-case">
+    <p>This node will do a GET request on the url that is behind a CloudFare protection.</p>
+    <p>The message will contain a property <em>payload</em> containing the body of the request.</p>
+    <p>You can also set the url directly in the message with the property <code>url</code>.</p>
+    <p>The headers can be set as the property <em>headers</em>.</p>
+</script>
