@@ -21,7 +21,6 @@ module.exports = function (RED) {
                 }
 
                 msg.payload = body;
-                msg.response = response;
                 node.send(msg);
             }, headers);
         });
