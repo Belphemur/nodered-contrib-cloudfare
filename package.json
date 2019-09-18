@@ -14,7 +14,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Belphemur/nodered-contrib-cloudfare",
   "dependencies": {
-    "cloudscraper": "1.5.x"
+    "cloudscraper": "4.1.4"
   },
   "node-red": {
     "nodes": {

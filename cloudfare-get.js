@@ -14,15 +14,16 @@ module.exports = function (RED) {
         this.on('input', function (msg) {
             url = msg.url ? msg.url : url;
             var headers = {} || msg.headers;
-            CloudScrapper.get(url, function (error, response, body) {
-                if(error) {
-                    node.error(error);
-                    return;
-                }
-
+            var options = {
+              uri: url,
+              headers : headers
+            };
+            CloudScrapper.get(options).then(function (response) {
                 msg.payload = body;
                 node.send(msg);
-            }, headers);
+            }).catch(function (reason) {
+                node.error(reason);
+            });
         });
     }
 
