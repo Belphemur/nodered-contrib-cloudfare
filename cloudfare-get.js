@@ -19,7 +19,7 @@ module.exports = function (RED) {
               headers : headers
             };
             CloudScrapper.get(options).then(function (response) {
-                msg.payload = body;
+                msg.payload = response;
                 node.send(msg);
             }).catch(function (reason) {
                 node.error(reason);
